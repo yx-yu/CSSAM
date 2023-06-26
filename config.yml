@@ -1,0 +1,31 @@
+# Epochs, hidden_size are for both translate.py and train.py
+epochs: 200
+batch_size: 200
+# model can be 'base', 'cat' or 'REModel' 'graph'
+#model: 'base'
+model: 'graph'
+device_id: 0
+random_seed: 31415
+embedding_dim: 300
+learning_rate: 0.0001
+hidden_size: 200
+dense_dim: 200
+output_dim: 200
+num_layers_lstm: 4
+use_cuda: True
+use_softmax_classifier: False
+use_bin: True
+use_bidirectional: True
+use_adam: True
+use_parallel: True
+save_path: 'trained_models'
+# dataset can be "conala" or "codesearchnet or cs105"
+dataset: 'conala'
+# encoder can be 'LSTM' or 'Transformer'
+encoder: 'Transformer'
+full_bimpm: True
+save_every: 10
+negative_examples: 5
+# Direction of Translation: code2lang or lang2code
+translate_task: 'code2lang'
+tune_thres: True
